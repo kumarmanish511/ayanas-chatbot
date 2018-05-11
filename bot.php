@@ -996,7 +996,8 @@ if($message['type']=='sticker'){
 }
 else
 if($message['type']=='text') {
-	$result = simi($command);
+	$pesan=str_replace(" ", "%20", $pesan_datang);
+	$result = simi($pesan);
         $balas = array(
             'replyToken' => $replyToken,														
 	    'messages' => array(
